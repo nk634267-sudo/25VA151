@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* #main p{
+            color:aqua;
+        } */
+        /* #inside p{
+            background-color: chocolate;
+        } */
+        /* * #main >p {
+            background-color: blue;
+        }
+        #main +p{
+            background-color: blueviolet;
+        }
+
+        #main + p{
+        background} */ */
+        /* style for special state of an elements . */
+        * a:link: {
+            text-decoration: none; font-size: 20px;
+        }
+        a:hover {
+            color: chartreuse; font-size: 25px;
+        }
+        a:active{
+            color:cornflowerblue;
+        } */
+
+
+#main .odd{
+    color:#f04;
+
+}
+#main p:nth-child(even){
+    color:blue;
+}
+/* style a specific part of an element.*/
+
+#main p::first-line{
+    background-color: aquamarine;
+}
+#main p::after{
+    content: "Read more";
+    color:red;0font-size: 40px;
+}
+    </style>
+</head>
+<body>
+    <!--css combinators-->
+
+    <div id="main"><!--div first-->
+        <p class="odd";
+<p>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus ratione impedit earum, expedita dolores praesentium officiis esse corporis. Nam est voluptate libero modi deserunt quasi enim voluptatibus ex facere dolorum!
+</p>
+<di id="inside"><!--inside first-->
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde quo deleniti corporis vel veniam illum, voluptatum, laboriosam rem, est enim deserunt aliquam praesentium eveniet nam sit assumenda nisi nemo qui?
+    </p>
+</div><!--inside first end-->
+    </div><!--div first end-->
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos numquam doloremque ab in ducimus expedita ea, earum quia voluptas reiciendis? Est, odit porro qui architecto nobis mollitia reprehenderit aliquam minus.
+    </p>
+    <a href="">visit my page!</a>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore aliquam atque recusandae veniam quod placeat commodi, eos officiis obcaecati, dolores repudiandae excepturi similique facere et ea aut quibusdam laudantium consequuntur?
+    </p>
+</body>
+</html>

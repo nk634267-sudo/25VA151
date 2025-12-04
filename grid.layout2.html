@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Website Layout</title>
+    <style>
+        /* Basic Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Main Container setup */
+        .grid-container {
+            background-color: white;
+            padding: 15px;
+            width: 90%;
+            max-width: 800px; /* Constrain width to look like the image */
+            height: 600px;
+            
+            /* CSS GRID STARTS HERE */
+            display: grid;
+            gap: 10px; /* Spacing between boxes */
+            
+            /* Define the layout grid */
+            grid-template-areas: 
+                "header header header"
+                "nav nav nav"
+                "left main right"
+                "footer footer footer";
+            
+            /* Column widths: Left (1fr), Middle (3fr), Right (1fr) */
+            grid-template-columns: 1fr 2.5fr 1fr;
+            
+            /* Row heights: Auto for top/bottom, 1fr fills the remaining space */
+            grid-template-rows: 60px 50px 1fr 60px;
+            
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        
+        .box {
+            border: 2px solid #000000; /* Light green border */
+            background-color: #f0f8f0; /* Very light green bg */
+            color: #3b8f3b; /* Green text color */
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Assigning grid areas to specific HTML elements */
+        .header {
+            grid-area: header;
+        }
+
+        .nav {
+            grid-area: nav;
+        }
+
+        .sidebar-left {
+            grid-area: left;
+        }
+
+        .main-content {
+            grid-area: main;
+            font-size: 1.5rem; /* Make main content text slightly bigger */
+        }
+
+        .sidebar-right {
+            grid-area: right;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+
+        /* Mobile Responsiveness: Stack everything vertically on small screens */
+        @media (max-width: 600px) {
+            .grid-container {
+                height: auto;
+                grid-template-areas: 
+                    "header"
+                    "nav"
+                    "main"
+                    "left"
+                    "right"
+                    "footer";
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+            .box {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <!-- Header -->
+        <header class="box header">Header</header>
+        
+        <!-- Navigation -->
+        <nav class="box nav">Navigation Menu</nav>
+        
+        <!-- Left Sidebar -->
+        <aside class="box sidebar-left">Content</aside>
+        
+        <!-- Main Content -->
+        <main class="box main-content">
+            Main<br>Content
+        </main>
+        
+        <!-- Right Sidebar -->
+        <aside class="box sidebar-right">Content</aside>
+        
+        <!-- Footer -->
+        <footer class="box footer">Footer</footer>
+    </div>
+
+</body>
+</html>
