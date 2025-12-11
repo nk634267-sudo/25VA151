@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Profile Card</title>
+
+    <style>
+        /* Main container using flexbox */
+        .card-container {
+            display: flex;
+            justify-content: center;       /* centers card horizontally */
+            align-items: center;           /* centers card vertically */
+            height: 100vh;                 /* full screen height */
+            background-color: #f2f2f2;
+        }
+
+        /* Student card */
+        .student-card {
+            display: flex;
+            flex-direction: column;        /* elements arranged vertically */
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            padding: 20px;
+            background: rgb(17, 167, 184);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            font-family: Arial;
+        }
+
+        .student-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .student-card h2 {
+            margin: 5px 0;
+        }
+
+        .student-card p {
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+    <style>
+        .profile-circle {
+            width: 120px;
+            height: 120px;
+            background: #1e90ff;   /* blue circle */
+            color: rgb(30, 123, 185);
+            font-size: 32px;
+            font-weight: bold;
+            border-radius: 50%;     /* makes it a circle */
+            
+            display: flex;
+            justify-content: center; /* horizontally center text */
+            align-items: center;     /* vertically center text */
+            
+            font-family: Arial;
+            margin: 20px auto;       /* center on page */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <div class="student-card">
+            <img src="https://www.pngkey.com/png/detail/52-523516_empty-profile-picture-circle.png" alt="Student Photo">
+
+            <h2>Niraj Kumar</h2>
+            <p><strong>Course:</strong> B.Tech Computer Science (Data Science)</p>
+            <p><strong>Year:</strong> 1st Year</p>
+            <p><strong>Adm No:</strong> 2025B15410243</p>
+        </div>
+    </div>
+    <div class="profile-circle">NK</div>
+
+</body>
+</html>
